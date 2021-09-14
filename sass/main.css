@@ -94,6 +94,69 @@ body {
           animation: moveInRight 1s ease-out;
 }
 
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.6px 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.6px 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: white;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn--white::after {
+  background-color: white;
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.2) scaleY(1.5);
+          transform: scaleX(1.2) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn--animated {
+  -webkit-animation: moveInBottom 0.8s ease-out 0.75s;
+          animation: moveInBottom 0.8s ease-out 0.75s;
+  /* it will apply all the animation styles of 0% before animation start */
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -196,69 +259,5 @@ body {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-  font-size: 1.6rem;
-}
-
-.btn:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 0.6px 1rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.6px 1rem rgba(0, 0, 0, 0.2);
-}
-
-.btn--white {
-  background-color: white;
-  color: #777;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.btn--white::after {
-  background-color: white;
-}
-
-.btn:hover::after {
-  -webkit-transform: scaleX(1.2) scaleY(1.5);
-          transform: scaleX(1.2) scaleY(1.5);
-  opacity: 0;
-}
-
-.btn--animated {
-  -webkit-animation: moveInBottom 0.8s ease-out 0.75s;
-          animation: moveInBottom 0.8s ease-out 0.75s;
-  /* it will apply all the animation styles of 0% before animation start */
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
 }
 /*# sourceMappingURL=main.css.map */

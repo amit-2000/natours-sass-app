@@ -34,7 +34,7 @@ body {
   color: $color-grey-dark;
   padding: 3rem;
 }
-
+// header block
 .header {
   height: 95vh;
   background-image: linear-gradient(
@@ -68,6 +68,7 @@ body {
   }
 }
 
+// Primary heading block
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
@@ -95,6 +96,57 @@ body {
   }
 }
 
+// btn block
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    font-size: 1.6rem;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.6px 1rem rgba($color-black, 0.2);
+  }
+  &--white {
+    background-color: $color-white;
+    color: #777;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s;
+  }
+  &--white::after {
+    background-color: $color-white;
+  }
+  &:hover::after {
+    transform: scaleX(1.2) scaleY(1.5);
+    opacity: 0;
+  }
+  &--animated {
+    animation: moveInBottom 0.8s ease-out 0.75s;
+    /* it will apply all the animation styles of 0% before animation start */
+    animation-fill-mode: backwards;
+  }
+}
 
 @keyframes moveInLeft {
   0% {
@@ -139,56 +191,4 @@ body {
     opacity: 1;
     transform: translate(0);
   }
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-  font-size: 1.6rem;
-}
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.6px 1rem rgba($color-black, 0.2);
-}
-
-.btn--white {
-  background-color: $color-white;
-  color: #777;
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
-.btn--white::after {
-  background-color: $color-white;
-}
-.btn:hover::after {
-  transform: scaleX(1.2) scaleY(1.5);
-  opacity: 0;
-}
-.btn--animated {
-  animation: moveInBottom 0.8s ease-out 0.75s;
-  /* it will apply all the animation styles of 0% before animation start */
-  animation-fill-mode: backwards;
 }
