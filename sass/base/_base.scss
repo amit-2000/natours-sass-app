@@ -1,3 +1,15 @@
 // Low level basics
 // resets , and styles for body element selectors
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Root */
+html {
+  font-size: 62.5%;
+}
+
