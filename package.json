@@ -1,0 +1,21 @@
+{
+  "name": "html-css-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.12",
+    "sass": "^1.39.0"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
