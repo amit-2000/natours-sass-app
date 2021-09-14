@@ -1,9 +1,10 @@
-/*
-COLORS:
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
+@import "base/base";
+// /*
+// COLORS:
+// Light green: #7ed56f
+// Medium green: #55c57a
+// Dark green: #28b485
+// */
 $color-primary: #7ed56f;
 $color-primary-light: #55c57a;
 $color-primary-dark: #28b485;
@@ -113,6 +114,10 @@ body {
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.2) scaleY(1.5);
+      opacity: 0;
+    }
   }
   &:active {
     transform: translateY(-1px);
@@ -121,6 +126,9 @@ body {
   &--white {
     background-color: $color-white;
     color: #777;
+    &::after {
+      background-color: $color-white;
+    }
   }
   &::after {
     content: "";
@@ -134,13 +142,7 @@ body {
     z-index: -1;
     transition: all 0.3s;
   }
-  &--white::after {
-    background-color: $color-white;
-  }
-  &:hover::after {
-    transform: scaleX(1.2) scaleY(1.5);
-    opacity: 0;
-  }
+
   &--animated {
     animation: moveInBottom 0.8s ease-out 0.75s;
     /* it will apply all the animation styles of 0% before animation start */
