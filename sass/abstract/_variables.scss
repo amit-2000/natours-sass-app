@@ -1,10 +1,42 @@
-
-
-
-$color-primary: #7ed56f;
-$color-primary-light: #55c57a;
+// colors
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-secondary-light-card-2: #053fff;
+$color-secondary-dark-card-2: #6a79fc;
+
+$color-secondary-light-card-3: #68fd54;
+$color-secondary-dark-card-3: #95ffb5;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
 $color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-green: rgb(0, 199, 0);
 $color-white: rgb(255, 255, 255);
 $color-black: #000;
+
+// font size
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-verticle: 8rem;
+$gutter-horizontal: 5rem;
+
+// ABOUT
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+// boxshadow
+$box-shadow: 0rem 1.5rem 4rem
+  rgba(
+    $color: #000000,
+    $alpha: 0.15,
+  );
