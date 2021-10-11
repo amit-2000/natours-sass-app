@@ -14,12 +14,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@mixin rotate($phone) {
-  @media (max-width: 600px) {
-    font-size: 50%;
-  }
-}
 
+// base + typo + layout + grid > page layout > components
 /*
 // MEDIA QUERY MANAGER
 0-600px   : phone

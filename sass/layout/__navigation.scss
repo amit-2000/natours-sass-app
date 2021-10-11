@@ -16,9 +16,17 @@
     text-align: center;
     cursor: pointer;
     transition: all 0.3s;
-    &:hover{
+    &:hover {
       transform: rotate(90deg);
       box-shadow: none;
+    }
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 2rem;
+    }
+    @include respond(phone) {
+      top:2rem;
+      right: 2rem;
     }
   }
 
@@ -38,6 +46,14 @@
     transform: scale(0);
     transition: transform 0.5s cubic-bezier(0.89, 0.01, 0.23, 1.01);
     // display: none;
+    @include respond(tab-port) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
+    @include respond(phone) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
 
   &__nav {
