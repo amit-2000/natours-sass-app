@@ -12,6 +12,20 @@
   & > * {
     transform: skewX(12deg);
   } // This will work for text only because shape has transform prop which has higher priority ?
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+    & > * {
+      transform: skewX(0deg);
+    }
+  }
+  @include respond(phone) {
+    transform: skweX(0);
+    transform: skewX(0deg);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -21,18 +35,32 @@
     @include clearFix;
     --webkit-shape-outside: circle(
       50% at 50% 50%
-    ); // now woill run in safari also
+    ); // now will run in safari also
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%); // used to make circle or circular shape.
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0deg);
+      // shape-outside: circle(50% at 50% 50%);
+    }
   }
   &__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     transition: all 0.5s;
     // backface-visibility: hidden;
+    @include respond(tab-port) {
+      transform: translateX(0) scale(1);
+    }
+  }
+  &__text {
+    transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: translate(-3rem) skewX(0);
+    }
   }
   &__caption {
     position: absolute;
@@ -59,5 +87,7 @@
   &:hover &__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%);
+  }
+  @include respond(tab-port) {
   }
 }

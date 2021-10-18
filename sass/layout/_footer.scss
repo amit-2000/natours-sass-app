@@ -59,7 +59,7 @@
     border-top: 1px solid $color-grey-dark-2;
     padding-top: 2rem;
     width: 80%;
-    float: right;
+    float: left;
     @include respond(tab-port) {
       width: 100%;
       float: none;
