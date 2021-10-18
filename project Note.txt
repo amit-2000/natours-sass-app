@@ -1,0 +1,4 @@
+Daily Notes/ Important points to keep in mind
+
+1) using floats in this project
+2) 
