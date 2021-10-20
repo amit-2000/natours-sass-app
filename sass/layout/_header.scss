@@ -20,7 +20,9 @@
   // dpi = dots per inch
   // 193 dpi = high resolution screen on apple retina display.
   // multiple conditions in a media queries.
-  @media (min-resolution: 192dpi) and(min-width :37.5rem), (min-width: 125rem) {
+  @media (min-resolution: 192dpi) and(min-width :37.5rem),
+    (min-width: 125rem),
+    (-webkit-min-device-pixel-ratio: 2) {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-secondary-light, 0.8),
