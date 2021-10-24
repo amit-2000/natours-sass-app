@@ -1009,7 +1009,7 @@ body {
 }
 
 .popup {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -1028,7 +1028,7 @@ body {
   }
   @media only screen and (max-width: 37.5em) {
     .popup {
-      height: 100vh;
+      height: 100%;
     }
   }
 }
