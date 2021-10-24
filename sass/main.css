@@ -1026,6 +1026,11 @@ body {
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(10px);
   }
+  @media only screen and (max-width: 37.5em) {
+    .popup {
+      height: 90vh;
+    }
+  }
 }
 
 .popup__content {
@@ -1038,7 +1043,7 @@ body {
   background-color: white;
   -webkit-box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
           box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  display: table;
+  display: table-cell;
   border-radius: 3px;
   overflow: hidden;
   opacity: 0;
@@ -1048,16 +1053,38 @@ body {
   transition: all 0.3s 0.2s;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .popup__content {
+    width: 100%;
+  }
+}
+
 .popup__left {
   width: 33.333%;
   display: table-cell;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .popup__left {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .popup__right {
-  width: 86.666%;
+  width: 80.666%;
   display: table-cell;
   vertical-align: middle;
   padding: 3rem 5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .popup__right {
+    width: 100%;
+    display: table-cell;
+  }
 }
 
 .popup__img {

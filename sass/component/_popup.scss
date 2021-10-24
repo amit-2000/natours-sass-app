@@ -16,32 +16,45 @@
     // blur the back-ground of selected element
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(10px);
+
+    @include respond(phone) {
+      height: 90vh;
+    }
   }
   &__content {
     @include absCenter;
     width: 75%;
     background-color: white;
     box-shadow: $box-shadow;
-    display: table;
+    display: table-cell;
     border-radius: 3px;
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.3s 0.2s;
 
-    // @include respond(tab-port) {
-    //   width: 100%;
-    // }
+    @include respond(phone) {
+      width: 100%;
+    }
   }
   &__left {
     width: 33.333%;
     display: table-cell;
+    @include respond(phone) {
+      width: 50%;
+      display: flex;
+    }
   }
   &__right {
-    width: 86.666%;
+    width: 80.666%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+      width: 100%;
+      display: table-cell;
+    }
   }
   &__img {
     display: block;
