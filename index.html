@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="./sass/main.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -97,7 +98,7 @@
         </section>
         <section class="section-features">
             <div class="row">
-                <div class="col-1-of-4">
+                <div class="col-1-of-4" data-aos="flip-down">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-world "></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
@@ -139,13 +140,13 @@
         </section>
         <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">
+                <h2 class="heading-secondary" data-aos="zoom-out">
                     Most populer tours
                 </h2>
             </div>
             <div class="row">
                 <div class="col-1-of-3">
-                    <div class="card">
+                    <div class="card" data-aos="fade-right">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--1">
                                 &nbsp;
@@ -176,7 +177,7 @@
                     </div>
                 </div>
                 <div class="col-1-of-3">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--2">
                                 &nbsp;
@@ -207,7 +208,7 @@
                     </div>
                 </div>
                 <div class="col-1-of-3">
-                    <div class="card">
+                    <div class="card" data-aos="fade-right">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--3">
                                 &nbsp;
@@ -239,7 +240,7 @@
                 </div>
 
             </div>
-            <div class="u-center-text u-margin-bottom-huge">
+            <div class="u-center-text u-margin-bottom-huge" data-aos="fade-up">
                 <a href="#" class="btn btn--green"> Discover All tours</a>
             </div>
         </section>
@@ -251,12 +252,12 @@
                     Your browser is not supported !
                 </video>
             </div>
-            <div class="u-center-text u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-big" data-aos="fade-right">
                 <h2 class="heading-secondary">
                     We make people genuinely happy
                 </h2>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up">
                 <div class="story">
                     <figure class="story__shape">
                         <img src="./img/nat-8.jpg" class="story__img" alt="Person on a tour">
@@ -273,7 +274,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up">
                 <div class="story">
                     <figure class="story__shape">
                         <img src="./img/nat-9.jpg" class="story__img" alt="Person on a tour">
@@ -291,7 +292,7 @@
                     </div>
                 </div>
             </div>
-            <div class="u-center-text u-margin-bottom-big">
+            <div class="u-center-text u-margin-bottom-big" data-aos="fade-up">
                 <a href="#" class="btn-text">Read more stories &rarr; </a>
             </div>
         </section>
@@ -352,7 +353,7 @@
         </div>
         <div class="row">
             <div class="col-1-of-2">
-                <div class="footer__navigation">
+                <div class="footer__navigation" data-aos="fade-right">
                     <ul class="footer__list">
                         <li class="footer__item">
                             <a href="#" class="footer__link">Company</a>
@@ -365,13 +366,13 @@
                 </div>
             </div>
             <div class="col-1-of-2">
-                <!-- <p class="footer__copyright">
+                <p class="footer__copyright" data-aos="fade-right">
                     Built my <a href="#" class="footer__link">Jonas Schmedtmann</a> for this online course <a href="#"
                         class="footer__link">Advance CSS and SASS</a>. Copyright &copy; by Jonas
                     Schmedtmann. You are allowes to use this webpage for both personal and commertial use, but NOT
                     to claim it as your own design. A credit to the original auther, Jonas schmedtmann, is of highly
                     appreciated !
-                </p> -->
+                </p>
             </div>
         </div>
     </footer>
@@ -400,7 +401,14 @@
         </div>
     </div>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS.init();
+        AOS.init({
+            duration: 1000,
+            // offset: 0,
+        });
+    </script>
 
 
     <!-- <section class="grid-test">
@@ -433,7 +441,6 @@
             <div class="col-3-of-4">col-3-of-4</div>
         </div>
     </section> -->
-
 
 </body>
 
